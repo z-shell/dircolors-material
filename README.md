@@ -1,62 +1,71 @@
-# `ZPM-ZSH/DIRCOLORS-MATERIAL` ZINIT PACKAGE
+<h3>
 
-## Homepage link: [zpm-zsh/dircolors-material](https://github.com/zpm-zsh/dircolors-material)
+| **Package source:** | Tarball | Binary |             Git              | Node | Gem |
+| :-----------------: | :-----: | :----: | :--------------------------: | :--: | :-: |
+|     **Status:**     |   :x:   |  :x:   | :heavy_check_mark: (default) | :x:  | :x: |
 
-| **Package source:** | Tarball | Binary |       Git        | Node | Gem |
-|:-------------------:|:-------:|:------:|:----------------:|:----:|:---:|
-|     **Status:**     |    -    |   -    | + <br> (default) |  –   |  –  |
+</h3>
 
-## Introduction
+- [Introduction](#introduction)
+- [Install](#install)
+	- [Available `pack''` invocations](#available-pack-invocations)
+	- [Default Profile](#default-profile)
+	- [`No-Color-Swaps` Profile](#no-color-swaps-profile)
+	- [`No-Zsh-Completion` Profile](#no-zsh-completion-profile)
+	- [`Minimal` Profile](#minimal-profile)
 
-[Zinit](https://github.com/z-shell/zinit) can use a `package.json`
-(similar in construct to the one used in `npm` packages) to automatically:
+# Introduction
 
-- get the plugin's Git repository OR release-package URL,
-- get the list of the recommended ices for the plugin,
-  - there can be multiple lists of ices,
-  - the ice lists are stored in *profiles*; there's at least one profile, *default*,
-  - the ices can be selectively overriden.
+> **[?]**
+> This repository not compatible with previous versions (zplugin, zinit).
+>
+> Please upgrade to [ZI](https://github.com/z-shell-zi)
 
-## The `dircolors-material` Package
+The [zpm-zsh/dircolors-material](https://github.com/zpm-zsh/dircolors-material) zsh package than can use the NPM package registry to automatically:
 
-The package provides the
-[zpm-zsh/dircolors-material](https://github.com/zpm-zsh/dircolors-material)
-definitions for GNU `ls`, `ogham/exa` and also setups zsh-completion system to
-use the definitions.
+-   get the plugin's Git repository OR release-package URL,
+-   get the list of the recommended ices for the plugin,
+    -   there can be multiple lists of ices,
+    -   the ice lists are stored in _profiles_; there's at least one profile, _default_,
+    -   the ices can be selectively overridden.
 
-Example invocations that'll install `zpm-zsh/dircolors-material` from Git
-repository in the most optimized way as described on the [Zinit
-Wiki](http://z-shell.github.io/zinit/wiki/LS_COLORS-explanation/):
+The package provides the [zpm-zsh/dircolors-material](https://github.com/zpm-zsh/dircolors-material) definitions for GNU `ls`, `ogham/exa` and also setups zsh-completion system to use the definitions.
+
+# Install
+
+## Available `pack''` invocations
+
+`zpm-zsh/dircolors-material` from Git repository in the most optimized way.
 
 ```zsh
 # Download the default profile
-zinit pack for dircolors-material
+zi pack for dircolors-material
 
 # Download the no-zsh-completion profile
-zinit pack"no-zsh-completion" for dircolors-material
+zi pack"no-zsh-completion" for dircolors-material
 
 # Download the no-color-swaps profile
-zinit pack"no-color-swaps" for dircolors-material
+zi pack"no-color-swaps" for dircolors-material
 
 # Download the minimal profile
-zinit pack"minimal" for dircolors-material
+zi pack"minimal" for dircolors-material
 ```
 
 ## Default Profile
 
 Provides the dircolors-material definitions for GNU `ls`, `ogham/exa` and also:
 
-- sets up the zsh-completion system to use the definitions,
-- automatically (i.e.: transparently for the updates of the plugin) swaps the
-  color for the directory to a more bright blue (of the index 63 in the standard
-  256 color palette),
-- uses a workaround for some old `dircolors` commands that improperly test
-  `$TERM` variable and produce empty output.
+-   sets up the zsh-completion system to use the definitions,
+-   automatically (i.e.: transparently for the updates of the plugin) swaps the
+    color for the directory to a more bright blue (of the index 63 in the standard
+    256 color palette),
+-   uses a workaround for some old `dircolors` commands that improperly test
+    `$TERM` variable and produce empty output.
 
-The Zinit command executed will be equivalent to:
+The ZI command executed will be equivalent to:
 
 ```zsh
-zinit lucid \
+zi lucid \
  atclone'(( !${+commands[dircolors]} )) && local P=g; \
     ${P}sed -i '/DIR/c\\DIR 38;5;63;1' material.dircolors; \
     TERM=ansi ${P}dircolors -b material.dircolors >! colors.zsh' \
@@ -65,16 +74,16 @@ zinit lucid \
     zpm-zsh/dircolors-material
 ```
 
-## `no-color-swaps` Profile
+## `No-Color-Swaps` Profile
 
 Provides the dircolors-material definitions for GNU `ls`, `ogham/exa` but
 doesn't swap the directory color, i.e.: it doesn't customize the original theme.
 It still initializes the zsh-completion system with the theme's colors.
 
-The Zinit command executed will be equivalent to:
+The ZI command executed will be equivalent to:
 
 ```zsh
-zinit lucid \
+zi lucid \
  atclone'(( !${+commands[dircolors]} )) && local P=g; \
     TERM=ansi ${P}dircolors -b dircolors-material >! colors.zsh' \
  atpull'%atclone' pick"colors.zsh" nocompile'!' \
@@ -82,16 +91,16 @@ zinit lucid \
     zpm-zsh/dircolors-material
 ```
 
-## `no-zsh-completion` Profile
+## `No-Zsh-Completion` Profile
 
 Provides the dircolors-material definitions for GNU `ls`, `ogham/exa` but
 doesn't set up the zsh-completion system to use them. It still swaps the
 directory color.
 
-The Zinit command executed will be equivalent to:
+The ZI command executed will be equivalent to:
 
 ```zsh
-zinit lucid \
+zi lucid \
  atclone'(( !${+commands[dircolors]} )) && local P=g; \
     ${P}sed -i '/DIR/c\\DIR 38;5;63;1' material.dircolors; \
     TERM=ansi ${P}dircolors -b material.dircolors >! colors.zsh' \
@@ -99,20 +108,18 @@ zinit lucid \
     zpm-zsh/dircolors-material
 ```
 
-## `minimal` Profile
+## `Minimal` Profile
 
 Provides the dircolors-material definitions for GNU `ls`, `ogham/exa` with both
 extra functions/features disabled, i.e.: without altering the original theme and
 without setting the zsh-completion system. Thus, this is a barebones profile.
 
-The Zinit command executed will be equivalent to:
+The ZI command executed will be equivalent to:
 
 ```zsh
-zinit lucid \
+zi lucid \
  atclone'(( !${+commands[dircolors]} )) && local P=g; \
     TERM=ansi ${P}dircolors -b dircolors-material >! colors.zsh' \
  atpull'%atclone' pick"colors.zsh" nocompile'!' for \
     zpm-zsh/dircolors-material
 ```
-
-<!-- vim:set ft=markdown tw=80 fo+=an1 autoindent: -->
