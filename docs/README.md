@@ -8,32 +8,32 @@
 
 - [Introduction](#introduction)
 - [Install](#install)
-	- [Available `pack''` invocations](#available-pack-invocations)
-	- [Default Profile](#default-profile)
-	- [`No-Color-Swaps` Profile](#no-color-swaps-profile)
-	- [`No-Zsh-Completion` Profile](#no-zsh-completion-profile)
-	- [`Minimal` Profile](#minimal-profile)
+  - [Available `pack''` invocations](#available-pack-invocations)
+  - [Default Profile](#default-profile)
+  - [`No-Color-Swaps` Profile](#no-color-swaps-profile)
+  - [`No-Zsh-Completion` Profile](#no-zsh-completion-profile)
+  - [`Minimal` Profile](#minimal-profile)
 
-# Introduction
+## Introduction
 
 > **[?]**
 > This repository not compatible with previous versions (zplugin, zinit).
 >
 > Please upgrade to [ZI](https://github.com/z-shell-zi)
 
-The [zpm-zsh/dircolors-material](https://github.com/zpm-zsh/dircolors-material) zsh package than can use the NPM package registry to automatically:
+The [zpm-zsh/dircolors-material](https://github.com/zpm-zsh/dircolors-material) zsh package that can use the NPM package registry to automatically:
 
--   get the plugin's Git repository OR release-package URL,
--   get the list of the recommended ices for the plugin,
-    -   there can be multiple lists of ices,
-    -   the ice lists are stored in _profiles_; there's at least one profile, _default_,
-    -   the ices can be selectively overridden.
+- get the plugin's Git repository OR release-package URL,
+- get the list of the recommended ices for the plugin,
+  - there can be multiple lists of ices,
+  - the ice lists are stored in _profiles_; there's at least one profile, _default_,
+  - the ices can be selectively overridden.
 
 The package provides the [zpm-zsh/dircolors-material](https://github.com/zpm-zsh/dircolors-material) definitions for GNU `ls`, `ogham/exa` and also setups zsh-completion system to use the definitions.
 
-# Install
+## Install
 
-## Available `pack''` invocations
+### Available `pack''` invocations
 
 `zpm-zsh/dircolors-material` from Git repository in the most optimized way.
 
@@ -51,16 +51,16 @@ zi pack"no-color-swaps" for dircolors-material
 zi pack"minimal" for dircolors-material
 ```
 
-## Default Profile
+### Default Profile
 
 Provides the dircolors-material definitions for GNU `ls`, `ogham/exa` and also:
 
--   sets up the zsh-completion system to use the definitions,
--   automatically (i.e.: transparently for the updates of the plugin) swaps the
-    color for the directory to a more bright blue (of the index 63 in the standard
-    256 color palette),
--   uses a workaround for some old `dircolors` commands that improperly test
-    `$TERM` variable and produce empty output.
+- sets up the zsh-completion system to use the definitions,
+- automatically (i.e.: transparently for the updates of the plugin) swaps the
+  color for the directory to a more bright blue (of the index 63 in the standard
+  256 color palette),
+- uses a workaround for some old `dircolors` commands that improperly test
+  `$TERM` variable and produce empty output.
 
 The ZI command executed will be equivalent to:
 
@@ -74,7 +74,7 @@ zi lucid \
     zpm-zsh/dircolors-material
 ```
 
-## `No-Color-Swaps` Profile
+### `No-Color-Swaps` Profile
 
 Provides the dircolors-material definitions for GNU `ls`, `ogham/exa` but
 doesn't swap the directory color, i.e.: it doesn't customize the original theme.
@@ -91,7 +91,7 @@ zi lucid \
     zpm-zsh/dircolors-material
 ```
 
-## `No-Zsh-Completion` Profile
+### `No-Zsh-Completion` Profile
 
 Provides the dircolors-material definitions for GNU `ls`, `ogham/exa` but
 doesn't set up the zsh-completion system to use them. It still swaps the
@@ -108,7 +108,7 @@ zi lucid \
     zpm-zsh/dircolors-material
 ```
 
-## `Minimal` Profile
+### `Minimal` Profile
 
 Provides the dircolors-material definitions for GNU `ls`, `ogham/exa` with both
 extra functions/features disabled, i.e.: without altering the original theme and
