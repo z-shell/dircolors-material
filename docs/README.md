@@ -1,27 +1,22 @@
-<h3>
+<h2 align="center">
+  <a href="https://github.com/z-shell/zi">
+    <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="80" height="80">
+  </a>
+❮ ZI ❯ Package - Any Gem
+</h2>
+
+<h2 align="center">
 
 | **Package source:** | Tarball | Binary |             Git              | Node | Gem |
 | :-----------------: | :-----: | :----: | :--------------------------: | :--: | :-: |
 |     **Status:**     |   :x:   |  :x:   | :heavy_check_mark: (default) | :x:  | :x: |
 
-</h3>
+</h2>
 
-- [Introduction](#introduction)
-- [Install](#install)
-  - [Available `pack''` invocations](#available-pack-invocations)
-  - [Default Profile](#default-profile)
-  - [`No-Color-Swaps` Profile](#no-color-swaps-profile)
-  - [`No-Zsh-Completion` Profile](#no-zsh-completion-profile)
-  - [`Minimal` Profile](#minimal-profile)
+> This repository compatible with [ZI](https://github.com/z-shell-zi)
 
-## Introduction
-
-> **[?]**
-> This repository not compatible with previous versions (zplugin, zinit).
->
-> Please upgrade to [ZI](https://github.com/z-shell-zi)
-
-The [zpm-zsh/dircolors-material](https://github.com/zpm-zsh/dircolors-material) zsh package that can use the NPM package registry to automatically:
+[ZI](https://github.com/z-shell/zi) can use a `package.json`
+(similar in construct to the one used in `npm` packages) to automatically:
 
 - get the plugin's Git repository OR release-package URL,
 - get the list of the recommended ices for the plugin,
