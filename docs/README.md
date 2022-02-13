@@ -2,7 +2,7 @@
   <a href="https://github.com/z-shell/zi">
     <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="80" height="80">
   </a>
-❮ ZI ❯ Package - dircolors material
+❮ ZI ❯ Package - Dircolors Material
 </h2>
 
 <h2 align="center">
@@ -13,7 +13,7 @@
 
 </h2>
 
-> This repository compatible with [ZI](https://github.com/z-shell-zi)
+> This repository compatible with [ZI](https://github.com/z-shell/zi)
 
 [ZI](https://github.com/z-shell/zi) can use a `package.json`
 (similar in construct to the one used in `npm` packages) to automatically:
