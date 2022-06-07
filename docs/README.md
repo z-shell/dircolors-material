@@ -1,37 +1,40 @@
-<h2 align="center">
-  <a href="https://github.com/z-shell/zi">
-    <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="80" height="80" />
-  </a>
-❮ ZI ❯ Package - Dircolors Material
-</h2>
+<div align="center"><h1>
+  <p><a href="https://github.com/z-shell/zi">
+    <img align="center" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="60px" height="60px" />
+  </a> ❮ ZI ❯ Package - Dircolors Material </p></h1>
 
-<h2 align="center">
+  <h2 align="center">
+  <p> The package provides the <a href="https://github.com/zpm-zsh/dircolors-material">zpm-zsh/dircolors-material</a> definitions for GNU `ls`, `ogham/exa` and also setups zsh-completion system to use the definitions. </p>
+  </h2>
+  
+  <h3 align="center">
 
 | **Package source:** | Tarball | Binary |             Git              | Node | Gem |
 | :-----------------: | :-----: | :----: | :--------------------------: | :--: | :-: |
 |     **Status:**     |   :x:   |  :x:   | :heavy_check_mark: (default) | :x:  | :x: |
 
-</h2>
-<h3>
-  
-The package provides the [zpm-zsh/dircolors-material](https://github.com/zpm-zsh/dircolors-material) definitions for GNU `ls`, `ogham/exa` and also setups zsh-completion system to use the definitions.
+  </h3></div><hr />
 
-</h3>
-
-### Available `pack''` invocations
+## Available `pack''` invocations
 
 `zpm-zsh/dircolors-material` from Git repository in the most optimized way.
 
-```zsh
+```shell
 # Download the default profile
 zi pack for dircolors-material
+```
 
+```shell
 # Download the no-zsh-completion profile
 zi pack"no-zsh-completion" for dircolors-material
+```
 
+```shell
 # Download the no-color-swaps profile
 zi pack"no-color-swaps" for dircolors-material
+```
 
+```shell
 # Download the minimal profile
 zi pack"minimal" for dircolors-material
 ```
@@ -113,8 +116,7 @@ zi lucid \
 
 > This repository compatible with [ZI](https://github.com/z-shell/zi)
 
-[ZI](https://github.com/z-shell/zi) can use a `package.json`
-(similar in construct to the one used in `npm` packages) to automatically:
+[ZI](https://github.com/z-shell/zi) can use a `package.json` (similar in construct to the [zsh-string-lib](https://github.com/z-shell/zsh-string-lib) to automatically:
 
 - get the plugin's Git repository OR release-package URL,
 - get the list of the recommended ices for the plugin,
