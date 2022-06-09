@@ -1,19 +1,30 @@
-<div align="center"><h1>
+<h1 align="center">
   <p><a href="https://github.com/z-shell/zi">
-    <img align="center" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="60px" height="60px" />
-  </a> ❮ ZI ❯ Package - Dircolors Material </p></h1>
-
-  <h2 align="center">
-  <p> The package provides the <a href="https://github.com/zpm-zsh/dircolors-material">zpm-zsh/dircolors-material</a> definitions for GNU `ls`, `ogham/exa` and also setups zsh-completion system to use the definitions. </p>
-  </h2>
-  
-  <h3 align="center">
-
-| **Package source:** | Tarball | Binary |             Git              | Node | Gem |
-| :-----------------: | :-----: | :----: | :--------------------------: | :--: | :-: |
-|     **Status:**     |   :x:   |  :x:   | :heavy_check_mark: (default) | :x:  | :x: |
-
-  </h3></div><hr />
+    <img align="center" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="60px" height="60px" /></a>
+    ❮ ZI ❯ Package - Dircolors Material </p>
+</h1>
+<h2 align="center">
+<p> The package provides the <a href="https://github.com/zpm-zsh/dircolors-material">zpm-zsh/dircolors-material</a> definitions for <b>GNU</b> <code>ls</code>, <code>ogham/exa</code> and also setups zsh-completion system to use the definitions. </p>
+</h2>  
+<h3 align="center">
+<table>
+    <tr>
+        <td><b>Package source</b></td>
+        <td>Tarball</td>
+        <td>Binary</td>
+        <td>Git</td>
+        <td>Node</td>
+        <td>Gem</td>
+    </tr>
+    <tr>
+        <td><b>Status:</b></td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✔️ (default)</td>
+        <td>❌</td>
+        <td>❌</td>
+    </tr>
+</table></h3><hr />
 
 ## Available `pack''` invocations
 
@@ -116,7 +127,7 @@ zi lucid \
 
 > This repository compatible with [ZI](https://github.com/z-shell/zi)
 
-[ZI](https://github.com/z-shell/zi) can use a `package.json` (similar in construct to the [zsh-string-lib](https://github.com/z-shell/zsh-string-lib) to automatically:
+The [ZI](https://github.com/z-shell/zi) package that uses the [zsh-string-lib](https://github.com/z-shell/zsh-string-lib) to automatically:
 
 - get the plugin's Git repository OR release-package URL,
 - get the list of the recommended ices for the plugin,
