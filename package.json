@@ -1,9 +1,5 @@
 {
   "name": "zsh-dircolors-material",
-  "version": "1.0.0",
-  "contributors": [],
-  "dependencies": {},
-  "deprecated": false,
   "description": "Dircolors material theme",
   "homepage": "https://github.com/zpm-zsh/material-colors",
   "author": "Grigorii Horos",
@@ -12,17 +8,16 @@
   },
   "license": "MIT",
   "keywords": [
-    "zi-package",
+    "terminal colors",
     "GNU ls colors",
     "exa colors",
-    "terminal colors",
+    "zi-package",
     "zsh"
   ],
   "zsh-data": {
     "plugin-info": {
       "user": "zpm-zsh",
       "plugin": "material-colors",
-      "version": "1.0.3"
     },
     "zi-ices": {
       "default": {
