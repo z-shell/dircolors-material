@@ -17,7 +17,7 @@
   "zsh-data": {
     "plugin-info": {
       "user": "zpm-zsh",
-      "plugin": "material-colors",
+      "plugin": "material-colors"
     },
     "zi-ices": {
       "default": {
